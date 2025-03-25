@@ -2,10 +2,16 @@
 
 echo "Welcome to Screen Match!\n";
 
+$quantityRatings = $argc - 1;
 $movieName = "Top Gun - Maverick";
-$releaseYear = $argv[1] ?? 2022;
-$sumMovieRating =  9 + 6 + 8 + 7.5 + 5;
-$movieRating = $sumMovieRating / 5;
+$releaseYear = 2022;
+$sumMovieRating =  0;
+
+for ($i = 1; $i <= $quantityRatings; $i++) {
+    $sumMovieRating = $sumMovieRating + $argv[$i];
+}
+
+$movieRating = $sumMovieRating / $quantityRatings;
 $isIncludedOnPlan = true;
 
 echo "Movie name: " . $movieName . "\n";
