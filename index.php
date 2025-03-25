@@ -3,9 +3,6 @@
 echo "Welcome to Screen Match!\n";
 
 $movieName = "Top Gun - Maverick";
-$movieName = "Hangover";
-$movieName = "Avengers";
-
 $releaseYear = $argv[1] ?? 2022;
 $sumMovieRating =  9 + 6 + 8 + 7.5 + 5;
 $movieRating = $sumMovieRating / 5;
@@ -28,6 +25,7 @@ $movieGender = match ($movieName) {
     "Top Gun - Maverick" => "action",
     "Avengers" => "superhero",
     "Hangover" => "comedy",
+    default => "unknown",
 };
 
 echo "The gender is: $movieGender";
