@@ -8,4 +8,5 @@ $sumMovieRating =  9 + 6 + 8 + 7.5 + 5;
 $movieRating = $sumMovieRating / 5;
 $isIncludedOnPlan = true;
 
-echo "Movie name: " . $movieName;
+echo "Movie name: " . $movieName . "\n";
+echo "Movie rating: $movieRating";
