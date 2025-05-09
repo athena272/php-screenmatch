@@ -2,16 +2,27 @@
 
 echo "Welcome to Screen Match!\n";
 
+$someNames = ['Bob', 'Carol'];
+$names = ['Alice', 'Daniel', 'Elisa', ...$someNames];
+echo $someNames;
+
 $quantityRatings = $argc - 1;
 $movieName = "Top Gun - Maverick";
 $releaseYear = 2022;
-$sumMovieRating =  0;
+$ratings = [];
+$sumMovieRating = 0;
 
 for ($i = 1; $i <= $quantityRatings; $i++) {
-    $sumMovieRating = $sumMovieRating + $argv[$i];
+     $ratings[] =  (float) $argv[$i] ;
 }
 
-$movieRating = $sumMovieRating / $quantityRatings;
+//foreach ($ratings as $rate) {
+//    $sumMovieRating += $rate;
+//}
+
+var_dump($ratings);
+
+$movieRating = array_sum($ratings) / count($ratings);
 $isIncludedOnPlan = true;
 
 echo "Movie name: " . $movieName . "\n";
@@ -34,4 +45,13 @@ $movieGender = match ($movieName) {
     default => "unknown",
 };
 
-echo "The gender is: $movieGender";
+echo "The gender is: $movieGender\n";
+
+$movie = [
+    "name" => "Thor: Ragnarok",
+    "year" => 2021,
+    "grade" => 7.8,
+    "gender" => "superhero"
+];
+
+echo $movie['name'];
