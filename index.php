@@ -1,57 +1,54 @@
 <?php
 
-echo "Welcome to Screen Match!\n";
+$balance = 1_000;
+$holder = 'Guilherme R. Alves';
 
-$someNames = ['Bob', 'Carol'];
-$names = ['Alice', 'Daniel', 'Elisa', ...$someNames];
-echo $someNames;
+echo "*************\n";
+echo "Account holder: $holder\n";
+echo "Current balance: \$$balance\n";
+echo "*************\n";
 
-$quantityRatings = $argc - 1;
-$movieName = "Top Gun - Maverick";
-$releaseYear = 2022;
-$ratings = [];
-$sumMovieRating = 0;
+do {
+    echo "1. Check current balance\n";
+    echo "2. Withdraw amount\n";
+    echo "3. Deposit amount\n";
+    echo "4. Exit\n";
 
-for ($i = 1; $i <= $quantityRatings; $i++) {
-     $ratings[] =  (float) $argv[$i] ;
-}
+    $option = (int) fgets(STDIN);
 
-//foreach ($ratings as $rate) {
-//    $sumMovieRating += $rate;
-//}
+    switch ($option) {
+        case 1:
+            echo "*************\n";
+            echo "Account holder: $holder\n";
+            echo "Current balance: \$$balance\n";
+            echo "*************\n";
+            break;
 
-var_dump($ratings);
+        case 2:
+            echo "How much would you like to withdraw?\n";
+            $amountToWithdraw = (float) fgets(STDIN);
+            if ($amountToWithdraw > $balance) {
+                echo "Insufficient funds\n";
+            } else {
+                $balance -= $amountToWithdraw;
+                echo "Withdraw successful\n";
+            }
+            break;
 
-$movieRating = array_sum($ratings) / count($ratings);
-$isIncludedOnPlan = true;
+        case 3:
+            echo "How much would you like to deposit?\n";
+            $amountToDeposit = (float) fgets(STDIN);
+            $balance += $amountToDeposit;
+            echo "Deposit successful\n";
+            break;
 
-echo "Movie name: " . $movieName . "\n";
-echo "Release year: $releaseYear\n";
-echo "Movie rating: $movieRating\n";
+        case 4:
+            echo "Goodbye!\n";
+            break;
 
-//Código omitido
-if ($releaseYear > 2022) {
-    echo "Esse filme é um lançamento\n";
-} elseif($releaseYear > 2020 && $releaseYear <= 2022) {
-    echo "Esse filme ainda é novo\n";
-} else {
-    echo "Esse filme não é um lançamento\n";
-}
+        default:
+            echo "Invalid option\n";
+            break;
 
-$movieGender = match ($movieName) {
-    "Top Gun - Maverick" => "action",
-    "Avengers" => "superhero",
-    "Hangover" => "comedy",
-    default => "unknown",
-};
-
-echo "The gender is: $movieGender\n";
-
-$movie = [
-    "name" => "Thor: Ragnarok",
-    "year" => 2021,
-    "grade" => 7.8,
-    "gender" => "superhero"
-];
-
-echo $movie['name'];
+    }
+} while ($option != 4);
