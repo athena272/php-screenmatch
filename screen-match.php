@@ -1,6 +1,6 @@
 <?php
 
-function displayReleaseMessage($year)
+function displayReleaseMessage(int $year): void
 {
     if ($year > 2022) {
         echo "This movie is a new release\n";
