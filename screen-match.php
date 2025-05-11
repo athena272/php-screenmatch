@@ -1,0 +1,48 @@
+<?php
+
+echo "Welcome to Screen Match!\n";
+
+$movieName = "Top Gun - Maverick";
+$releaseYear = 2022;
+
+$numberOfRatings = $argc - 1;
+$ratings = [];
+
+for ($i = 1; $i < $argc; $i++) {
+    $ratings[] = (float) $argv[$i];
+}
+
+$movieRating = array_sum($ratings) / $numberOfRatings;
+$isPrime = true;
+
+$includedInPlan = $isPrime || $releaseYear < 2020;
+
+echo "Movie name: " . $movieName . "\n";
+echo "Movie rating: $movieRating\n";
+echo "Release year: $releaseYear\n";
+
+if ($releaseYear > 2022) {
+    echo "This movie is a new release\n";
+} elseif ($releaseYear > 2020 && $releaseYear <= 2022) {
+    echo "This movie is still recent\n";
+} else {
+    echo "This movie is not a new release\n";
+}
+
+$genre = match ($movieName) {
+    "Top Gun - Maverick" => "action",
+    "Thor: Ragnarok" => "superhero",
+    "The Hangover" => "comedy",
+    default => "unknown genre",
+};
+
+echo "The movie genre is: $genre\n";
+
+$movie = [
+    "name" => "Thor: Ragnarok",
+    "year" => 2021,
+    "rating" => 7.8,
+    "genre" => "superhero",
+];
+
+echo $movie["year"];
