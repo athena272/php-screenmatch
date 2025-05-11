@@ -1,5 +1,7 @@
 <?php
 
+require "./functions.php";
+
 echo "Welcome to Screen Match!\n";
 
 $movieName = "Top Gun - Maverick";
