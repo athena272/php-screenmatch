@@ -11,7 +11,7 @@ function displayReleaseMessage($year)
     }
 }
 
-function isIncludedInPlan($isPrime, $releaseYear) {
+function isIncludedInPlan(bool $isPrime, int $releaseYear) : bool {
     return $isPrime || $releaseYear < 2020;
 }
 
