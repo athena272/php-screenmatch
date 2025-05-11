@@ -11,6 +11,10 @@ function displayReleaseMessage($year)
     }
 }
 
+function isIncludedInPlan($isPrime, $releaseYear) {
+    return $isPrime || $releaseYear < 2020;
+}
+
 echo "Welcome to Screen Match!\n";
 
 $movieName = "Top Gun - Maverick";
@@ -24,9 +28,7 @@ for ($i = 1; $i < $argc; $i++) {
 }
 
 $movieRating = array_sum($ratings) / $numberOfRatings;
-$isPrime = true;
-
-$includedInPlan = $isPrime || $releaseYear < 2020;
+$includedInPlan = isIncludedInPlan(true, $releaseYear);
 
 echo "Movie name: " . $movieName . "\n";
 echo "Movie rating: $movieRating\n";
