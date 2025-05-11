@@ -1,5 +1,16 @@
 <?php
 
+function displayReleaseMessage($year)
+{
+    if ($year > 2022) {
+        echo "This movie is a new release\n";
+    } elseif ($year > 2020 && $year <= 2022) {
+        echo "This movie is still recent\n";
+    } else {
+        echo "This movie is not a new release\n";
+    }
+}
+
 echo "Welcome to Screen Match!\n";
 
 $movieName = "Top Gun - Maverick";
@@ -20,14 +31,6 @@ $includedInPlan = $isPrime || $releaseYear < 2020;
 echo "Movie name: " . $movieName . "\n";
 echo "Movie rating: $movieRating\n";
 echo "Release year: $releaseYear\n";
-
-if ($releaseYear > 2022) {
-    echo "This movie is a new release\n";
-} elseif ($releaseYear > 2020 && $releaseYear <= 2022) {
-    echo "This movie is still recent\n";
-} else {
-    echo "This movie is not a new release\n";
-}
 
 $genre = match ($movieName) {
     "Top Gun - Maverick" => "action",
