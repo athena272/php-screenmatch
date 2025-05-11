@@ -38,4 +38,6 @@ $movie = [
 ];
 
 echo "{$movie['year']}\n";
-echo "Is included in plan?: $includedInPlan\n";
+
+$movieJSON = json_encode($movie);
+file_put_contents(__DIR__ . '/movie.json', $movieJSON);
