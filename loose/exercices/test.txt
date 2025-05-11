@@ -1,0 +1,4 @@
+I like PHP
+PHP is awesome
+
+PHP is awesome
