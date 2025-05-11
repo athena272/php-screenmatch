@@ -11,8 +11,8 @@ function displayReleaseMessage($year)
     }
 }
 
-function isIncludedInPlan(bool $isPrime, int $releaseYear) : bool {
-    return $isPrime || $releaseYear < 2020;
+function isIncludedInPlan(bool $isPrime, int $releaseYear) : string {
+    return ($isPrime || $releaseYear < 2020) ? "Yes" : "No";
 }
 
 echo "Welcome to Screen Match!\n";
@@ -50,4 +50,5 @@ $movie = [
     "genre" => "superhero",
 ];
 
-echo $movie["year"];
+echo "{$movie['year']}\n";
+echo "Is included in plan?: $includedInPlan\n";
