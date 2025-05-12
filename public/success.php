@@ -4,12 +4,12 @@ $movie = json_decode($jsonFileContent, true);
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="eng">
 <head>
     <title>Inserted Movie</title>
 </head>
 <body>
-<h1>Sucesso! Filme <?php echo $_GET['movie']; ?> inserido</h1>
+<h1>Success! Movie <?php echo $_GET['movie']; ?> added</h1>
 <h1><?= $movie['name']; ?></h1>
 <dl>
     <dt>Release Year</dt>
