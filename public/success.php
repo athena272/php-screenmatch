@@ -9,6 +9,7 @@ $movie = json_decode($jsonFileContent, true);
     <title>Inserted Movie</title>
 </head>
 <body>
+<h1>Sucesso! Filme <?php echo $_GET['movie']; ?> inserido</h1>
 <h1><?= $movie['name']; ?></h1>
 <dl>
     <dt>Release Year</dt>
