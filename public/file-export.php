@@ -8,3 +8,5 @@ $movie = [
 ];
 
 file_put_contents('movie.json', json_encode($movie));
+
+header('Location: /success.php?movie=' . $movie['name']);
