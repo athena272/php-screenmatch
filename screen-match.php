@@ -1,6 +1,6 @@
 <?php
 
-require "./functions.php";
+require "./src/functions.php";
 
 echo "Welcome to Screen Match!\n";
 
@@ -35,4 +35,4 @@ $movie = createMovie(name: "Thor: Ragnarok", year: 2021, rating: 7.8, genre: "su
 echo "{$movie['year']}\n";
 
 $movieJSON = json_encode($movie);
-file_put_contents(__DIR__ . '/movie.json', $movieJSON);
+file_put_contents(__DIR__ . '/src/movie.json', $movieJSON);
