@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__ . '/src/Model/Genre.php';
+require __DIR__ . '/src/Model/Enum/Genre.php';
 require __DIR__ . '/src/Model/Title.php';
 require __DIR__ . '/src/Model/Movie.php';
 require __DIR__ . '/src/Model/Series.php';
@@ -19,7 +19,10 @@ var_dump($movie);
 
 echo $movie->average() . "\n";
 
+echo $movie->genre->name. "\n";
+
 echo $series->releaseYear . "\n";
 
 $series->rate(8);
 echo $series->average() . "\n";
+echo $series->genre->name. "\n";
