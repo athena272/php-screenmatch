@@ -1,4 +1,6 @@
 <?php
+
+require __DIR__ . '/Model/Movie.php';
 function displayReleaseMessage(int $year): void
 {
     if ($year > 2022) {
@@ -13,11 +15,19 @@ function isIncludedInPlan(bool $isPrime, int $releaseYear) : string {
     return ($isPrime || $releaseYear < 2020) ? "Yes" : "No";
 }
 
-function createMovie(string $name, int $year, float $rating, string $genre) : array {
-    return [
-        "name" => $name,
-        "year" => $year,
-        "rating" => $rating,
-        "genre" => $genre,
-    ];
+function createMovie(string $name, int $year, float $rating, string $genre) : Movie {
+
+    $movie = new Movie();
+    $movie->name = $name;
+    $movie->year = $year;
+    $movie->rating = $rating;
+    $movie->genre = $genre;
+    return $movie;
+
+//    return [
+//        "name" => $name,
+//        "year" => $year,
+//        "rating" => $rating,
+//        "genre" => $genre,
+//    ];
 }
