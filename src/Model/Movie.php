@@ -1,16 +1,10 @@
 <?php
 
 class Movie {
-    private string $name;
-    private int $releaseYear;
-    private string $genre;
     private array $ratings;
 
-    public function __construct(string $name, int $releaseYear, string $genre)
+    public function __construct(private string $name, private int $releaseYear, private string $genre)
     {
-        $this->name = $name;
-        $this->releaseYear = $releaseYear;
-        $this->genre = $genre;
         $this->ratings = [];
     }
 
