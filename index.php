@@ -32,7 +32,7 @@ echo "The movie genre is: $genre\n";
 
 $movie = createMovie(name: "Thor: Ragnarok", year: 2021, rating: 7.8, genre: "superhero");
 
-echo "{$movie['year']}\n";
+echo "{$movie->name}\n";
 
 $movieJSON = json_encode($movie);
 file_put_contents(__DIR__ . '/src/movie.json', $movieJSON);
