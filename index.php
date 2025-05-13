@@ -13,6 +13,13 @@ $movie->rate(10);
 $movie->rate(5);
 $movie->rate(5);
 
+$series = new Series('Lost', 2007, Genre::Drama, 10, 20, 30);
+
 var_dump($movie);
 
-echo $movie->average();
+echo $movie->average() . "\n";
+
+echo $series->releaseYear . "\n";
+
+$series->rate(8);
+echo $series->average() . "\n";
