@@ -3,7 +3,7 @@
 class Movie {
     private array $ratings;
 
-    public function __construct(public readonly string $name, public readonly int $releaseYear, public readonly string $genre)
+    public function __construct(public readonly string $name, public readonly int $releaseYear, public readonly Genre $genre)
     {
         $this->ratings = [];
     }
