@@ -2,13 +2,13 @@
 
 class BankAccount
 {
-    private int $balanceInCents;
+    private int $balance;
 
     public function __construct(
         public readonly string $accountHolderName,
         public readonly AccountType $type,
     ) {
-        $this->balanceInCents = 0;
+        $this->balance = 0;
     }
 
     public function deposit(int $amount): void
@@ -17,7 +17,7 @@ class BankAccount
             throw new InvalidArgumentException("Deposit amount must be positive.");
         }
 
-        $this->balanceInCents += $amount;
+        $this->balance += $amount;
     }
 
     public function withdraw(int $amount): void
@@ -26,15 +26,15 @@ class BankAccount
             throw new InvalidArgumentException("Withdrawal amount must be positive.");
         }
 
-        if ($amount > $this->balanceInCents) {
+        if ($amount > $this->balance) {
             throw new RuntimeException("Insufficient balance for withdrawal.");
         }
 
-        $this->balanceInCents -= $amount;
+        $this->balance -= $amount;
     }
 
-    public function getBalanceInCents(): int
+    public function getBalance(): int
     {
-        return $this->balanceInCents;
+        return $this->balance;
     }
 }
