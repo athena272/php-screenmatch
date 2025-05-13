@@ -1,6 +1,6 @@
 <?php
 
-class Series
+class Series extends Title
 {
     private array $ratings;
 
@@ -13,19 +13,6 @@ class Series
         public readonly int $minutesPerEpisode,
     )
     {
-        $this->ratings = [];
-    }
-
-    public function rate(float $rating): void
-    {
-        $this->ratings[] = $rating;
-    }
-
-    public function average(): float
-    {
-        $sum = array_sum($this->ratings);
-        $count = count($this->ratings);
-
-        return $sum / $count;
+        parent::__construct($name, $releaseYear, $genre);
     }
 }
