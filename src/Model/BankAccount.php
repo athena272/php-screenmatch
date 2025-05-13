@@ -2,9 +2,14 @@
 
 class BankAccount
 {
-    private int $balanceInCents = 0;
-    private string $accountHolderName;
-    private string $accountNumber;
+    private int $balanceInCents;
+
+    public function __construct(
+        public readonly string $accountHolderName,
+        public readonly AccountType $type,
+    ) {
+        $this->balanceInCents = 0;
+    }
 
     public function deposit(int $amount): void
     {
@@ -31,25 +36,5 @@ class BankAccount
     public function getBalanceInCents(): int
     {
         return $this->balanceInCents;
-    }
-
-    public function setAccountHolderName(string $name): void
-    {
-        $this->accountHolderName = $name;
-    }
-
-    public function getAccountHolderName(): string
-    {
-        return $this->accountHolderName;
-    }
-
-    public function setAccountNumber(string $number): void
-    {
-        $this->accountNumber = $number;
-    }
-
-    public function getAccountNumber(): string
-    {
-        return $this->accountNumber;
     }
 }
