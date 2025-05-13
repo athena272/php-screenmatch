@@ -4,13 +4,14 @@ class Movie {
     private string $name;
     private int $releaseYear;
     private string $genre;
-    private array $ratings = [];
+    private array $ratings;
 
     public function __construct(string $name, int $releaseYear, string $genre)
     {
         $this->name = $name;
         $this->releaseYear = $releaseYear;
         $this->genre = $genre;
+        $this->ratings = [];
     }
 
     function rate(float $rating): void {
