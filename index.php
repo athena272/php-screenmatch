@@ -1,10 +1,11 @@
 <?php
 
 require __DIR__ . '/src/Model/Movie.php';
+require __DIR__ . '/src/Model/Genre.php';
 
 echo "Welcome to Screen Match!\n";
 
-$movie = new Movie("Thor: Ragnarok", 2021, "superhero");
+$movie = new Movie("Thor: Ragnarok", 2021, Genre::Superhero);
 $movie->rate(10);
 $movie->rate(10);
 $movie->rate(5);
