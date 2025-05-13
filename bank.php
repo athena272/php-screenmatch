@@ -12,7 +12,8 @@ $account->withdraw(2_500); // R$25,00
 // Output account details
 echo "Account Holder: " . $account->accountHolderName . "\n";
 echo "Account Type: " . $account->type->name . "\n";
-echo "Current Balance: R$ " . number_format($account->getBalanceInCents() / 100, 2, ',', '.') . "\n";
+echo "Current Balance: R$ {$account->getBalanceInCents()} \n";
+//echo "Current Balance: R$ " . number_format($account->getBalanceInCents() / 100, 2, ',', '.') . "\n";
 // Check if account type has a fee
 if ($account->type->hasFee()) {
     echo "⚠️  This account type has transaction fees.\n";
