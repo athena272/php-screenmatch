@@ -3,7 +3,7 @@
 class Movie {
     private array $ratings;
 
-    public function __construct(private string $name, private int $releaseYear, private string $genre)
+    public function __construct(public readonly string $name, public readonly int $releaseYear, public readonly string $genre)
     {
         $this->ratings = [];
     }
@@ -17,20 +17,6 @@ class Movie {
         $count = count($this->ratings);
 
         return $sum / $count;
-    }
-
-    public function getName(): string
-    {
-        return $this->name;
-    }
-
-    public function getReleaseYear(): int
-    {
-        return $this->releaseYear;
-    }
-
-    public function getGenre(): string {
-        return $this->genre;
     }
 }
 
