@@ -1,12 +1,16 @@
 <?php
 
-abstract class Title
+abstract class Title implements Rateable
 {
     private array $ratings;
 //    private static float $minRating = 7.5;
     private const float MIN_RATING = 7.5;
 
-    public function __construct(public readonly string $name, public readonly int $releaseYear, public readonly Genre $genre)
+    public function __construct(
+        public readonly string $name,
+        public readonly int    $releaseYear,
+        public readonly Genre  $genre
+    )
     {
         $this->ratings = [];
     }
@@ -22,6 +26,11 @@ abstract class Title
         $count = count($this->ratings);
 
         return $count > 0 ? $sum / $count : 0.0;
+    }
+
+    public function getGender(): string
+    {
+        return $this->genre->name;
     }
 
     abstract public function durationInMinutes(): int;
