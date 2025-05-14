@@ -1,7 +1,7 @@
 <?php
 
-require __DIR__ . "/src/Model/Enum/AccountType.php";
-require __DIR__ . "/src/Model/BankAccount.php";
+require __DIR__ . "/src/Models/Enum/AccountType.php";
+require __DIR__ . "/src/Models/BankAccount.php";
 
 echo "=== Welcome to the Bank System ===\n";
 // Creating an account
