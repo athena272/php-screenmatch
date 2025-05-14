@@ -1,6 +1,6 @@
 <?php
 
-class Title
+abstract class Title
 {
     private array $ratings;
 //    private static float $minRating = 7.5;
@@ -24,10 +24,7 @@ class Title
         return $count > 0 ? $sum / $count : 0.0;
     }
 
-    public function durationInMinutes(): int
-    {
-        return 0;
-    }
+    abstract public function durationInMinutes(): int;
 
     public function isGood(): bool
     {
