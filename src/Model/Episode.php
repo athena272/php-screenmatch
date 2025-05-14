@@ -3,13 +3,16 @@
 class Episode implements Rateable
 {
     private array $ratings;
+
     public function __construct(
         public readonly Series $series,
         public readonly string $name,
-        public readonly int $episodeNumber,
-    ) {
+        public readonly int    $episodeNumber,
+    )
+    {
         $this->ratings = [];
     }
+
     public function rate(float $rating): void
     {
         $this->ratings[] = $rating;
