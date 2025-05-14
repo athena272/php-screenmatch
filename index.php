@@ -4,6 +4,7 @@ require __DIR__ . '/src/Model/Enum/Genre.php';
 require __DIR__ . '/src/Model/Title.php';
 require __DIR__ . '/src/Model/Movie.php';
 require __DIR__ . '/src/Model/Series.php';
+require __DIR__ . '/src/Services/MarathonCalculator.php';
 
 echo "Welcome to Screen Match!\n";
 
@@ -26,3 +27,9 @@ echo $series->releaseYear . "\n";
 $series->rate(8);
 echo $series->average() . "\n";
 echo $series->genre->name . "\n";
+
+$calculator = new MarathonCalculator();
+$calculator->include($movie);
+echo "Movie \"{$movie->name}\" duration: ". $calculator->getTotalDuration() . " min\n";
+$calculator->include($series);
+echo "Series \"{$series->name}\" duration: ". $calculator->getTotalDuration() . " min\n";
