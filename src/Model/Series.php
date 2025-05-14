@@ -13,4 +13,10 @@ class Series extends Title
     {
         parent::__construct($name, $releaseYear, $genre);
     }
+
+    #[\Override]
+    public function durationInMinutes(): int
+    {
+        return ($this->seasons * $this->episodesPerSeason * $this->minutesPerEpisode);
+    }
 }
