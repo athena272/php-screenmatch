@@ -6,11 +6,7 @@ class MarathonCalculator
 
     public function include(Title $title): void
     {
-        if ($title instanceof Movie) {
-            $this->totalDuration += $title->durationInMinutes;
-        } elseif ($title instanceof Series) {
-            $this->totalDuration += $title->seasons * $title->episodesPerSeason * $title->minutesPerEpisode;
-        }
+       $this->totalDuration += $title->durationInMinutes();
     }
 
     public function getTotalDuration(): int
