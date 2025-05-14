@@ -26,7 +26,7 @@ class Title
 
     public function durationInMinutes()
     {
-
+        return 0;
     }
 
     public function isGood(): bool
