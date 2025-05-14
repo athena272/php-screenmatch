@@ -24,7 +24,7 @@ class Title
         return $count > 0 ? $sum / $count : 0.0;
     }
 
-    public function durationInMinutes()
+    public function durationInMinutes(): int
     {
         return 0;
     }
