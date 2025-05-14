@@ -1,11 +1,11 @@
 <?php
 
-require __DIR__ . '/src/Interface/Rateable.php';
-require __DIR__ . '/src/Model/Enum/Genre.php';
-require __DIR__ . '/src/Model/Title.php';
-require __DIR__ . '/src/Model/Movie.php';
-require __DIR__ . '/src/Model/Series.php';
-require __DIR__ . '/src/Model/Episode.php';
+require __DIR__ . '/src/Interfaces/Rateable.php';
+require __DIR__ . '/src/Models/Enum/Genre.php';
+require __DIR__ . '/src/Models/Title.php';
+require __DIR__ . '/src/Models/Movie.php';
+require __DIR__ . '/src/Models/Series.php';
+require __DIR__ . '/src/Models/Episode.php';
 require __DIR__ . '/src/Services/MarathonCalculator.php';
 require __DIR__ . '/src/Services/StarRatingConverter.php';
 
