@@ -1,6 +1,7 @@
 <?php
 
-enum Genre {
+enum Genre
+{
     case Action;
     case Comedy;
     case Horror;

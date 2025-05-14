@@ -13,7 +13,7 @@ foreach ($grades as $grade) {
 }
 
 $bankAccount = [
-    'holder' =>'Vinicius Dias',
+    'holder' => 'Vinicius Dias',
     'balance' => 100
 ];
 

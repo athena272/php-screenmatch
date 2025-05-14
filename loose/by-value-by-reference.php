@@ -1,11 +1,13 @@
 <?php
 
-function doubleByValue(float $value) : float {
+function doubleByValue(float $value): float
+{
     $value *= 2;
     return $value;
 }
 
-function doubleByReference(float &$value) : float {
+function doubleByReference(float &$value): float
+{
     $value *= 2;
     return $value;
 }

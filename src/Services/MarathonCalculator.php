@@ -1,4 +1,5 @@
 <?php
+
 class MarathonCalculator
 {
     private int $totalDuration = 0;
@@ -8,8 +9,7 @@ class MarathonCalculator
         if ($title instanceof Movie) {
             $this->totalDuration += $title->durationInMinutes;
         } elseif ($title instanceof Series) {
-            $this->totalDuration +=
-                $title->seasons * $title->episodesPerSeason * $title->minutesPerEpisode;
+            $this->totalDuration += $title->seasons * $title->episodesPerSeason * $title->minutesPerEpisode;
         }
     }
 

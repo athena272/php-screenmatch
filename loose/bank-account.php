@@ -14,7 +14,7 @@ do {
     echo "3. Deposit amount\n";
     echo "4. Exit\n";
 
-    $option = (int) fgets(STDIN);
+    $option = (int)fgets(STDIN);
 
     switch ($option) {
         case 1:
@@ -26,7 +26,7 @@ do {
 
         case 2:
             echo "How much would you like to withdraw?\n";
-            $amountToWithdraw = (float) fgets(STDIN);
+            $amountToWithdraw = (float)fgets(STDIN);
             if ($amountToWithdraw > $balance) {
                 echo "Insufficient funds\n";
             } else {
@@ -37,7 +37,7 @@ do {
 
         case 3:
             echo "How much would you like to deposit?\n";
-            $amountToDeposit = (float) fgets(STDIN);
+            $amountToDeposit = (float)fgets(STDIN);
             $balance += $amountToDeposit;
             echo "Deposit successful\n";
             break;

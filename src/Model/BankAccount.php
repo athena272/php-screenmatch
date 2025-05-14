@@ -5,9 +5,10 @@ class BankAccount
     private int $balance;
 
     public function __construct(
-        public readonly string $accountHolderName,
+        public readonly string      $accountHolderName,
         public readonly AccountType $type,
-    ) {
+    )
+    {
         $this->balance = 0;
     }
 

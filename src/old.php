@@ -11,7 +11,7 @@ $numberOfRatings = $argc - 1;
 $ratings = [];
 
 for ($i = 1; $i < $argc; $i++) {
-    $ratings[] = (float) $argv[$i];
+    $ratings[] = (float)$argv[$i];
 }
 
 $movieRating = array_sum($ratings) / $numberOfRatings;
