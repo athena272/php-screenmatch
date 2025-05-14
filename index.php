@@ -34,9 +34,9 @@ echo $series->getGender() . "\n";
 
 $calculator = new MarathonCalculator();
 $calculator->include($movie);
-echo "Movie \"{$movie->name}\" duration: ". $calculator->getTotalDuration() . " min\n";
+echo "Movie \"{$movie->name}\" duration: " . $calculator->getTotalDuration() . " min\n";
 $calculator->include($series);
-echo "Series \"{$series->name}\" duration: ". $calculator->getTotalDuration() . " min\n";
+echo "Series \"{$series->name}\" duration: " . $calculator->getTotalDuration() . " min\n";
 
 $conversor = new StarRatingConverter();
 echo $conversor->convert($series);
