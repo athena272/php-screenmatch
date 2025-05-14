@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__ . '/Model/Movie.php';
+require __DIR__ . '/Models/Movie.php';
 function displayReleaseMessage(int $year): void
 {
     if ($year > 2022) {
