@@ -1,5 +1,7 @@
 <?php
 
+namespace ScreenMatch\Models\Enum;
+
 enum Genre
 {
     case Action;

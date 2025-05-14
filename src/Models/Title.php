@@ -1,5 +1,11 @@
 <?php
 
+namespace ScreenMatch\Models;
+
+use ScreenMatch\Interfaces\Rateable;
+use ScreenMatch\Traits\WithRating;
+use ScreenMatch\Models\Enum\Genre;
+
 abstract class Title implements Rateable
 {
     use WithRating;

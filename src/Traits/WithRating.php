@@ -1,5 +1,7 @@
 <?php
 
+namespace Screenmatch\Traits;
+
 trait WithRating
 {
     private array $ratings = [];

@@ -1,5 +1,7 @@
 <?php
 
+namespace ScreenMatch\Models\Enum;
+
 enum AccountType
 {
     case Checking;

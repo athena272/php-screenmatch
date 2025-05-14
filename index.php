@@ -1,5 +1,6 @@
 <?php
 
+require __DIR__ . '/src/Traits/WithRating.php';
 require __DIR__ . '/src/Interfaces/Rateable.php';
 require __DIR__ . '/src/Models/Enum/Genre.php';
 require __DIR__ . '/src/Models/Title.php';

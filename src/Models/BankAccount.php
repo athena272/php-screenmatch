@@ -1,5 +1,11 @@
 <?php
 
+namespace ScreenMatch\Models;
+
+use ScreenMatch\Models\Enum\AccountType;
+use InvalidArgumentException;
+use RuntimeException;
+
 class BankAccount
 {
     private int $balance;

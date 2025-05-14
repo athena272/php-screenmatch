@@ -1,5 +1,9 @@
 <?php
 
+namespace Screenmatch\Services;
+
+use Screenmatch\Interfaces\Rateable;
+
 class StarRatingConverter
 {
     public function convert(Rateable $rateable): float

@@ -1,5 +1,9 @@
 <?php
 
+namespace ScreenMatch\Models;
+
+use ScreenMatch\Models\Enum\Genre;
+
 class Series extends Title
 {
     public function __construct(
