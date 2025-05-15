@@ -1,6 +1,6 @@
 <?php
 
-namespace ScreenMatch\Models\Enum;
+namespace ScreenMatch\Enum;
 
 enum AccountType
 {

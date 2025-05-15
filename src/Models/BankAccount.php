@@ -2,9 +2,9 @@
 
 namespace ScreenMatch\Models;
 
-use ScreenMatch\Models\Enum\AccountType;
 use InvalidArgumentException;
 use RuntimeException;
+use ScreenMatch\Enum\AccountType;
 
 class BankAccount
 {

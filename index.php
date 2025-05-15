@@ -1,14 +1,21 @@
 <?php
 
-require __DIR__ . '/src/Traits/WithRating.php';
-require __DIR__ . '/src/Interfaces/Rateable.php';
-require __DIR__ . '/src/Models/Enum/Genre.php';
-require __DIR__ . '/src/Models/Title.php';
-require __DIR__ . '/src/Models/Movie.php';
-require __DIR__ . '/src/Models/Series.php';
-require __DIR__ . '/src/Models/Episode.php';
-require __DIR__ . '/src/Services/MarathonCalculator.php';
-require __DIR__ . '/src/Services/StarRatingConverter.php';
+spl_autoload_register(function (string $className) {
+    $path = str_replace('ScreenMatch', 'src', $className) . '.php';
+    $path = str_replace("\\", '/', $path);
+
+    require_once $path;
+});
+
+use ScreenMatch\Models\{
+    Movie, Series, Episode
+};
+
+use ScreenMatch\Enum\Genre;
+
+use ScreenMatch\Services\{
+    StarRatingConverter, MarathonCalculator
+};
 
 echo "Welcome to Screen Match!\n";
 

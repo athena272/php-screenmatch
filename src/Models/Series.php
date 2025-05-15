@@ -2,7 +2,7 @@
 
 namespace ScreenMatch\Models;
 
-use ScreenMatch\Models\Enum\Genre;
+use ScreenMatch\Enum\Genre;
 
 class Series extends Title
 {

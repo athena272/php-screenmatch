@@ -2,9 +2,9 @@
 
 namespace ScreenMatch\Models;
 
+use ScreenMatch\Enum\Genre;
 use ScreenMatch\Interfaces\Rateable;
 use ScreenMatch\Traits\WithRating;
-use ScreenMatch\Models\Enum\Genre;
 
 abstract class Title implements Rateable
 {

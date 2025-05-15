@@ -2,6 +2,8 @@
 
 namespace ScreenMatch\Models;
 
+use ScreenMatch\Enum\Genre;
+
 class Movie extends Title
 {
 
