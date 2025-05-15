@@ -9,7 +9,13 @@ require 'autoload.php';
 
 $series = new Series('Series name', 2024, Genre::Action, 7, 20, 30);
 $episode = new Episode($series, 'Piloto', 1);
-$episode->rate(10);
 
-$conversor = new StarRatingConverter();
-echo $conversor->convert($episode);
+try {
+    $episode->rate(45);
+    $episode->rate(-35);
+
+    $conversor = new StarRatingConverter();
+    echo $conversor->convert($episode);
+} catch (Exception $e) {
+    echo $e->getMessage();
+}
