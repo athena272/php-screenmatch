@@ -1,11 +1,6 @@
 <?php
 
-spl_autoload_register(function (string $className) {
-    $path = str_replace('ScreenMatch', 'src', $className) . '.php';
-    $path = str_replace("\\", '/', $path);
-
-    require_once $path;
-});
+require 'autoload.php';
 
 use ScreenMatch\Models\{
     Movie, Series, Episode
